@@ -31,18 +31,61 @@
             height: 400px;
             object-fit: cover;
         }
+        .thumbnails .animal {
+            width: 100px;
+            height: 100px;
+        }
+        .thumbnails .animals-section {
+            justify-content: center;
+        }
 
-        .animals-section {
+        .animals-section, .animal-cards {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+        }
+        .card-img {
+            max-width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+        .card:not(:last-child) {
+            margin-right: 5px;
+        }
+        table {
+            border: .05rem solid #ccc;
+        }
+        thead tr {
+            background-color: #fafafa;
+        }
+        .bonus span {
+            background-image: linear-gradient( to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12 );
+            color: #fff;
+            font-family: "Courier New", Courier, monospace;
+            
         }
     </style>
 </head>
 
 <body>
-
-    <h1>Animals by Sai Deep Konduri</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Interesting Animals</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="plane.html">Plane</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="train.html">Train</a>
+                  </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <h1 class="mt-2 mb-2">Animals by Sai Deep Konduri</h1>
     <div class="container">
         <div class="row">
             <div class="col-sm-2">K</div>
@@ -157,7 +200,7 @@
         <section class="mt-4">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown button
+                  Dropdown
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="plane.html">Plane</a></li>
@@ -165,7 +208,53 @@
                 </ul>
               </div>
         </section>
-
+        <section class="mt-4">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Animal</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your animal">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Sign up for newsletter?t</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </section>
+        <section class="mt-4">
+            <h2 class="bonus text-center"><span>Bonus</span></h2>
+            <div class="animal-cards">
+                <div class="card" style="flex: 33%">
+                    <img src="images/deer.jpg" class="card-img-top card-img "  alt="A Deer">
+                    <div class="card-body">
+                      <h5 class="card-title">Deer</h5>
+                      <p class="card-text">Deer or true deer are hoofed ruminant mammals forming the family Cervidae.</p>
+                      <a href="https://en.wikipedia.org/wiki/Deer" class="btn btn-primary">Wiki</a>
+                    </div>
+                  </div>
+                  <div class="card" style="flex: 33%">
+                    <img src="images/owl.jpg" class="card-img-top card-img "  alt="An Owl">
+                    <div class="card-body">
+                      <h5 class="card-title">Owl</h5>
+                      <p class="card-text">Owls are birds from the order Strigiformes, which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.</p>
+                      <a href="https://en.wikipedia.org/wiki/Owl" class="btn btn-primary">Wiki</a>
+                    </div>
+                  </div>
+                  <div class="card" style="flex: 33%">
+                    <img src="images/kangaroo.jpg" class="card-img-top card-img "  alt="A kangaroo">
+                    <div class="card-body">
+                      <h5 class="card-title">Kangaroo</h5>
+                      <p class="card-text">The kangaroo is a marsupial from the family Macropodidae. In common use the term is used to describe the largest species from this family, the red kangaroo, as well as the antilopine kangaroo, eastern grey kangaroo, and western grey kangaroo.</p>
+                      <a href="https://en.wikipedia.org/wiki/Kangaroo" class="btn btn-primary">Wiki</a>
+                    </div>
+                  </div>
+            </div>
+        </section>
     </div>
 </body>
 
